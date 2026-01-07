@@ -31,7 +31,22 @@ public class BoardManager : MonoBehaviour
 
     private void CreateInitialBoard(Vector2 offset)
     {
-        
+        candies = new GameObject[xSize, ySize];
+
+        float startX = this.transform.position.x;
+        float startY = this.transform.position.y;
+
+        for(int x = 0; x < xSize ; x++)
+        {
+            for(int y =0; y < ySize; y++)
+            {
+                GameObject newCandy = Instantiate(currentCandy, new Vector3(startX +(offset.x * x), 
+                                    startY +(offset.y *y), 0), currentCandy.transform.rotation  );
+                newCandy.name = String.Format("Candy[{0}][{1}]", x, y);
+                candies[x,y] = newCandy;
+            }
+        }
+
     }
     // Update is called once per frame
     void Update()
