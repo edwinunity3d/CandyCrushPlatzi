@@ -88,7 +88,7 @@ TextureImporter:
     overridden: 0
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: Standalone
     maxTextureSize: 2048
@@ -101,7 +101,7 @@ TextureImporter:
     overridden: 0
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: iOS
     maxTextureSize: 2048
@@ -127,7 +127,7 @@ TextureImporter:
     overridden: 0
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: WindowsStoreApps
     maxTextureSize: 2048
@@ -140,16 +140,16 @@ TextureImporter:
     overridden: 0
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: background_1
+      name: Background_1
       rect:
         serializedVersion: 2
-        x: 50
-        y: 54
+        x: 45
+        y: 49
         width: 1125
         height: 2436
       alignment: 0
@@ -160,18 +160,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 729e21d3c171e4947917b943734c1f28
-      internalID: 21300000
+      spriteID: b899edd2df9b66d4da8e568f766593d1
+      internalID: -2029645092
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_2
+      name: Background_2
       rect:
         serializedVersion: 2
         x: 1225
-        y: 54
+        y: 62
         width: 1125
         height: 2436
       alignment: 0
@@ -182,18 +182,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 710fcac4fe7b9488bb67d68fc8363ea1
-      internalID: 21300002
+      spriteID: 9a22fb2f26cba7542b7c355b6273d4c9
+      internalID: -1215592381
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_3
+      name: Background_3
       rect:
         serializedVersion: 2
-        x: 2400
-        y: 54
+        x: 2405
+        y: 51
         width: 1125
         height: 2436
       alignment: 0
@@ -204,8 +204,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04ac3c70c95ea44fa8a1587a50ff922e
-      internalID: 21300004
+      spriteID: 0c3724a31fcd141409f7699691f7da88
+      internalID: -1439502832
       vertices: []
       indices: 
       edges: []
@@ -224,9 +224,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      background_1: 21300000
-      background_2: 21300002
-      background_3: 21300004
+      1: -2029645092
+      Background_1: -2029645092
+      Background_2: -1215592381
+      Background_3: -1439502832
+      k: -2029645092
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
