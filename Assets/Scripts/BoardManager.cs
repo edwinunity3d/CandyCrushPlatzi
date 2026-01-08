@@ -15,6 +15,8 @@ public class BoardManager : MonoBehaviour
     public bool isShifting { get; set;}
     public float paddingX, paddignY;
 
+    private Candy selectedCandy;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
