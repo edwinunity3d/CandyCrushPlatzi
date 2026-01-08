@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Random =  UnityEngine.Random;
 
 public class BoardManager : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class BoardManager : MonoBehaviour
     private GameObject[ , ] candies;
 
     public bool isShifting { get; set;}
+    public float paddingX, paddignY;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -25,7 +27,9 @@ public class BoardManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        Vector2 offset = currentCandy.GetComponent<BoxCollider2D>().size;
+        //Vector2 offset = currentCandy.GetComponent<BoxCollider2D>().size;
+        Vector2 offset = new Vector2(currentCandy.GetComponent<BoxCollider2D>().size.x + paddingX, 
+                                    currentCandy.GetComponent<BoxCollider2D>().size.y + paddignY);
         CreateInitialBoard(offset);
     }
 
@@ -41,8 +45,13 @@ public class BoardManager : MonoBehaviour
             for(int y =0; y < ySize; y++)
             {
                 GameObject newCandy = Instantiate(currentCandy, new Vector3(startX +(offset.x * x), 
-                                    startY +(offset.y *y), 0), currentCandy.transform.rotation  );
+                                 startY +(offset.y *y), 0), currentCandy.transform.rotation, transform );
                 newCandy.name = String.Format("Candy[{0}][{1}]", x, y);
+
+                Sprite sprite = prefabs[Random.Range(0, prefabs.Count)];
+                newCandy.GetComponent<SpriteRenderer>().sprite = sprite;
+                newCandy.GetComponent<Candy>().id = -1;
+
                 candies[x,y] = newCandy;
             }
         }
